@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizki Nazami</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app" class="h-screen w-full flex justify-center items-center flex-col gap-y-4">
+        <div id="data">
+            <ul v-for="(data, index) in makanan">
+              {{index+1}} {{data.nama}} {{data.rasa}}
+            </ul>
+          </div>
+          <div id="data">
+            <ul v-for="(data, index) in minuman">
+              {{index+1}} {{data.nama}} {{data.rasa}}
+            </ul>
+        </div>
+   <button @click=generateMakanan() class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Generate Makanan</button>
+   <button @click=generateMinuman() class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Generate Minuman</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
